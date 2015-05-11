@@ -53,9 +53,9 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     var opacityView = UIView()
-    var homeContainerView = UIView()
+    var mainContainerView = UIView()
     var leftContainerView = UIView()
-    var homeViewController: UIViewController?
+    var mainViewController: UIViewController?
     var leftViewController: UIViewController?
     var leftPanGesture: UIPanGestureRecognizer?
     var leftTapGetsture: UITapGestureRecognizer?
@@ -71,22 +71,22 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    convenience init(homeViewController: UIViewController, leftMenuViewController: UIViewController) {
+    convenience init(mainViewController: UIViewController, leftMenuViewController: UIViewController) {
         self.init()
-        self.homeViewController = homeViewController
+        self.mainViewController = mainViewController
         self.leftViewController = leftMenuViewController
         self.initView()
     }
     
-    convenience init(homeViewController: UIViewController, rightMenuViewController: UIViewController) {
+    convenience init(mainViewController: UIViewController, rightMenuViewController: UIViewController) {
         self.init()
-        self.homeViewController = homeViewController
+        self.mainViewController = mainViewController
         self.initView()
     }
     
-    convenience init(homeViewController: UIViewController, leftMenuViewController: UIViewController, rightMenuViewController: UIViewController) {
+    convenience init(mainViewController: UIViewController, leftMenuViewController: UIViewController, rightMenuViewController: UIViewController) {
         self.init()
-        self.homeViewController = homeViewController
+        self.mainViewController = mainViewController
         self.leftViewController = leftMenuViewController
         self.initView()
     }
@@ -94,10 +94,10 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     deinit { }
     
     func initView() {
-        homeContainerView = UIView(frame: self.view.bounds)
-        homeContainerView.backgroundColor = UIColor.clearColor()
-        homeContainerView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
-        self.view.insertSubview(homeContainerView, atIndex: 0)
+        mainContainerView = UIView(frame: self.view.bounds)
+        mainContainerView.backgroundColor = UIColor.clearColor()
+        mainContainerView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
+        self.view.insertSubview(mainContainerView, atIndex: 0)
 
         var opacityframe: CGRect = self.view.bounds
         var opacityOffset: CGFloat = 0
@@ -126,7 +126,7 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
         super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
         
-        self.homeContainerView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        self.mainContainerView.transform = CGAffineTransformMakeScale(1.0, 1.0)
         self.leftContainerView.hidden = true
     }
     
@@ -147,7 +147,7 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillLayoutSubviews() {
         // topLayoutGuideの値が確定するこのタイミングで各種ViewControllerをセットする
-        self.setUpViewController(self.homeContainerView, targetViewController: self.homeViewController)
+        self.setUpViewController(self.mainContainerView, targetViewController: self.mainViewController)
         self.setUpViewController(self.leftContainerView, targetViewController: self.leftViewController)
     }
     
@@ -286,7 +286,7 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             self.leftContainerView.frame = frame
             self.opacityView.layer.opacity = Float(self.options.contentViewOpacity)
-            self.homeContainerView.transform = CGAffineTransformMakeScale(self.options.contentViewScale, self.options.contentViewScale)
+            self.mainContainerView.transform = CGAffineTransformMakeScale(self.options.contentViewScale, self.options.contentViewScale)
         }) { (Bool) -> Void in
             self.disableContentInteraction()
             self.leftViewController?.endAppearanceTransition()
@@ -310,7 +310,7 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             self.leftContainerView.frame = frame
             self.opacityView.layer.opacity = 0.0
-            self.homeContainerView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            self.mainContainerView.transform = CGAffineTransformMakeScale(1.0, 1.0)
             }) { (Bool) -> Void in
                 self.removeShadow(self.leftContainerView)
                 self.enableContentInteraction()
@@ -338,11 +338,11 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         return self.leftContainerView.frame.origin.x <= self.leftMinOrigin()
     }
     
-    func changeMainViewController(homeViewController: UIViewController,  close: Bool) {
+    func changeMainViewController(mainViewController: UIViewController,  close: Bool) {
         
-        self.removeViewController(self.homeViewController)
-        self.homeViewController = homeViewController
-        self.setUpViewController(self.homeContainerView, targetViewController: self.homeViewController)
+        self.removeViewController(self.mainViewController)
+        self.mainViewController = mainViewController
+        self.setUpViewController(self.mainContainerView, targetViewController: self.mainViewController)
         if (close) {
             self.closeLeft()
         }
@@ -419,7 +419,7 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     private func applyLeftContentViewScale() {
         var openedLeftRatio: CGFloat = self.getOpenedLeftRatio()
         var scale: CGFloat = 1.0 - ((1.0 - self.options.contentViewScale) * openedLeftRatio);
-        self.homeContainerView.transform = CGAffineTransformMakeScale(scale, scale)
+        self.mainContainerView.transform = CGAffineTransformMakeScale(scale, scale)
     }
     
     private func addShadowToView(targetContainerView: UIView) {
@@ -432,7 +432,7 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     
     private func removeShadow(targetContainerView: UIView) {
         targetContainerView.layer.masksToBounds = true
-        self.homeContainerView.layer.opacity = 1.0
+        self.mainContainerView.layer.opacity = 1.0
     }
     
     private func removeContentOpacity() {
@@ -445,11 +445,11 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func disableContentInteraction() {
-        self.homeContainerView.userInteractionEnabled = false
+        self.mainContainerView.userInteractionEnabled = false
     }
     
     private func enableContentInteraction() {
-        self.homeContainerView.userInteractionEnabled = true
+        self.mainContainerView.userInteractionEnabled = true
     }
     
     private func setOpenWindowLevel() {
@@ -497,7 +497,7 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         frame.origin.x = finalXOrigin
         self.leftContainerView.frame = frame
         self.opacityView.layer.opacity = 0.0
-        self.homeContainerView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        self.mainContainerView.transform = CGAffineTransformMakeScale(1.0, 1.0)
         self.removeShadow(self.leftContainerView)
         self.enableContentInteraction()
     }

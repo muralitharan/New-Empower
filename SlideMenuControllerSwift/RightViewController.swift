@@ -70,6 +70,8 @@ class RightViewController : UIViewController {
         appointment1.priorityColor = UIColor(red: 76/255, green: 153/255, blue: 0/255, alpha: 1.0)
         appointment1.status = "confirmed"
         appointment1.isFamily = false
+        appointment1.visitType = "Chiropractor Appointment"
+        appointment1.location = "ABC Clinic"
         
         let appointment2 = Appointment()
         appointment2.physician = physician1.name
@@ -80,6 +82,8 @@ class RightViewController : UIViewController {
         appointment2.status = "pending"
         appointment2.isFamily = true
         appointment2.personName = "Edmunds Joan"
+        appointment2.visitType = "Follow-up Visit"
+        appointment2.location = "Alabama Medical"
         
         let appointment3 = Appointment()
         appointment3.physician = physician2.name
@@ -90,6 +94,8 @@ class RightViewController : UIViewController {
         appointment3.status = "cancelled"
         appointment3.isFamily = true
         appointment3.personName = "Dyer Jessica"
+        appointment3.visitType = "Annual Physical"
+        appointment3.location = "ABC Clinic"
         
         let appointment4 = Appointment()
         appointment4.physician = physician3.name
@@ -99,6 +105,8 @@ class RightViewController : UIViewController {
         appointment4.priorityColor = UIColor(red: 76/255, green: 153/255, blue: 0/255, alpha: 1.0)
         appointment4.status = "confirmed"
         appointment4.isFamily = false
+        appointment4.visitType = "Chiropractor Appointment"
+        appointment4.location = "Alabama Medical"
         
         let appointment5 = Appointment()
         appointment5.physician = physician2.name
@@ -109,6 +117,8 @@ class RightViewController : UIViewController {
         appointment5.status = "cancelled"
         appointment5.isFamily = true
         appointment5.personName = "Davidson Irene"
+        appointment5.visitType = "Lab Work"
+        appointment5.location = "ABC Clinic"
         
         let appointment6 = Appointment()
         appointment6.physician = physician3.name
@@ -118,6 +128,8 @@ class RightViewController : UIViewController {
         appointment6.priorityColor = UIColor(red: 255/255, green: 153/255, blue: 51/255, alpha: 1.0)
         appointment6.status = "pending"
         appointment6.isFamily = false
+        appointment6.visitType = "Cardiology Check-up"
+        appointment6.location = "ABC Clinic"
 
         let appointment7 = Appointment()
         appointment7.physician = physician2.name
@@ -127,6 +139,8 @@ class RightViewController : UIViewController {
         appointment7.priorityColor = UIColor(red: 255/255, green: 153/255, blue: 51/255, alpha: 1.0)
         appointment7.status = "pending"
         appointment7.isFamily = false
+        appointment7.visitType = "Heart Check-up"
+        appointment7.location = "ABC Clinic"
         
         user.appointments = [appointment1, appointment2, appointment3, appointment4, appointment5, appointment6, appointment7]
         

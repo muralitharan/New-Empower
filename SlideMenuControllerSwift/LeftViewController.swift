@@ -8,8 +8,7 @@
 import UIKit
 
 enum LeftMenu: Int {
-    case Home = 0
-    case Main
+    case Main = 0
     case Swift
     case Java
     case Go
@@ -25,8 +24,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
 
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Home", "Main", "Swift", "Java", "Go", "NonMenu"]
-    var homeViewController: UIViewController!
+    var menus = ["Main", "Swift", "Java", "Go", "NonMenu"]
     var mainViewController: UIViewController!
     var swiftViewController: UIViewController!
     var javaViewController: UIViewController!
@@ -42,8 +40,6 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
-        self.mainViewController = UINavigationController(rootViewController: mainViewController)
         let swiftViewController = storyboard.instantiateViewControllerWithIdentifier("SwiftViewController") as! SwiftViewController
         self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
         
@@ -85,8 +81,6 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     
     func changeViewController(menu: LeftMenu) {
         switch menu {
-        case .Home:
-            self.slideMenuController()?.changeMainViewController(self.homeViewController, close: true)
         case .Main:
             self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
         case .Swift:

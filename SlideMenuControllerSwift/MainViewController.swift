@@ -81,14 +81,20 @@ class AppointmentCell: UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var visitType: UILabel!
+    @IBOutlet weak var location: UILabel!
     @IBOutlet weak var sideView: UIView!
     
     var expanded: Bool = false {
         didSet {
             if expanded {
                 heightConstraint.priority = 1
+                visitType.hidden = false
+                location.hidden = false
             } else {
                 heightConstraint.priority = 999
+                visitType.hidden = true
+                location.hidden = true
             }
         }
     }
@@ -103,10 +109,12 @@ class AppointmentCell: UITableViewCell {
             patientName.text = "You"
         }
         physician.text = appointment.physician
-        time.text = appointment.time
+        time.text = "Time: \(appointment.time)"
         date.text = appointment.date
         month.text = appointment.month
         status.text = appointment.status
+        visitType.text = "Visit Type: \(appointment.visitType)"
+        location.text = "Location: \(appointment.visitType)"
         sideView.backgroundColor = appointment.priorityColor
         date.textColor = appointment.priorityColor
         month.textColor = appointment.priorityColor

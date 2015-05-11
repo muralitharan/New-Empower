@@ -45,5 +45,7 @@ class Appointment {
     var status: String = ""
     var isFamily: Bool = true
     var personName: String = ""
+    var visitType: String = ""
+    var location: String = ""
     
 }
