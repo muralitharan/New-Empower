@@ -62,6 +62,74 @@ class RightViewController : UIViewController {
         user.physicians = [physician1,physician2,physician3]
         user.appointmentTypes = ["Follow-up Visit", "Annual Physical", "Lab Work", "Cardiology Check-up"]
         
+        let appointment1 = Appointment()
+        appointment1.physician = physician3.name
+        appointment1.time = "10:30 AM"
+        appointment1.date = "20"
+        appointment1.month = "JAN"
+        appointment1.priorityColor = UIColor(red: 76/255, green: 153/255, blue: 0/255, alpha: 1.0)
+        appointment1.status = "confirmed"
+        appointment1.isFamily = false
+        
+        let appointment2 = Appointment()
+        appointment2.physician = physician1.name
+        appointment2.time = "05:30 PM"
+        appointment2.date = "12"
+        appointment2.month = "NOV"
+        appointment2.priorityColor = UIColor(red: 255/255, green: 153/255, blue: 51/255, alpha: 1.0)
+        appointment2.status = "pending"
+        appointment2.isFamily = true
+        appointment2.personName = "Edmunds Joan"
+        
+        let appointment3 = Appointment()
+        appointment3.physician = physician2.name
+        appointment3.time = "09:30 AM"
+        appointment3.date = "02"
+        appointment3.month = "SEP"
+        appointment3.priorityColor = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1.0)
+        appointment3.status = "cancelled"
+        appointment3.isFamily = true
+        appointment3.personName = "Dyer Jessica"
+        
+        let appointment4 = Appointment()
+        appointment4.physician = physician3.name
+        appointment4.time = "12:30 PM"
+        appointment4.date = "12"
+        appointment4.month = "AUG"
+        appointment4.priorityColor = UIColor(red: 76/255, green: 153/255, blue: 0/255, alpha: 1.0)
+        appointment4.status = "confirmed"
+        appointment4.isFamily = false
+        
+        let appointment5 = Appointment()
+        appointment5.physician = physician2.name
+        appointment5.time = "05:30 PM"
+        appointment5.date = "13"
+        appointment5.month = "MAR"
+        appointment5.priorityColor = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1.0)
+        appointment5.status = "cancelled"
+        appointment5.isFamily = true
+        appointment5.personName = "Davidson Irene"
+        
+        let appointment6 = Appointment()
+        appointment6.physician = physician3.name
+        appointment6.time = "11:30 AM"
+        appointment6.date = "31"
+        appointment6.month = "MAR"
+        appointment6.priorityColor = UIColor(red: 255/255, green: 153/255, blue: 51/255, alpha: 1.0)
+        appointment6.status = "pending"
+        appointment6.isFamily = false
+
+        let appointment7 = Appointment()
+        appointment7.physician = physician2.name
+        appointment7.time = "01:30 PM"
+        appointment7.date = "28"
+        appointment7.month = "FEB"
+        appointment7.priorityColor = UIColor(red: 255/255, green: 153/255, blue: 51/255, alpha: 1.0)
+        appointment7.status = "pending"
+        appointment7.isFamily = false
+        
+        user.appointments = [appointment1, appointment2, appointment3, appointment4, appointment5, appointment6, appointment7]
+        
         return user
     }
     

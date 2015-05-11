@@ -22,6 +22,8 @@ class User {
     var preferredDateAndTime:[String:Int]?
     var modeOfcontacts:[String] = []
     var selectedModeOfContact:String = ""
+    
+    var appointments:[Appointment] = []
 }
 
 
@@ -32,4 +34,16 @@ class Physician {
     var address1:String = ""
     var address2:String = ""
     var address3:String = ""
+}
+
+class Appointment {
+    var physician: String = ""
+    var time: String = ""
+    var date: String = ""
+    var month: String = ""
+    var priorityColor: UIColor = UIColor()
+    var status: String = ""
+    var isFamily: Bool = true
+    var personName: String = ""
+    
 }

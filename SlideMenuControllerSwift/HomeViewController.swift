@@ -33,16 +33,16 @@ class HomeViewController: UIViewController, UIPageViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    private func setViewControllerAtIndex(newIndex: Int) {
-        let singleStatViewController = StatsPageViewController.viewControllerAtIndex(newIndex)!
-        
-        if statsPageViewController.viewControllers.isEmpty {
-            statsPageViewController.setViewControllers([singleStatViewController])
-        } else {
-            let direction: UIPageViewControllerNavigationDirection = newIndex < healthStatsPageViewController.currentPageIndex ? .Reverse : .Forward
-            healthStatsPageViewController.setViewControllers([healthStatViewController], direction:direction, animated: true)
-        }
-    }
+//    private func setViewControllerAtIndex(newIndex: Int) {
+//        let singleStatViewController = statsPageViewController.viewControllerAtIndex(newIndex)
+//        
+//        if statsPageViewController.viewControllers.isEmpty {
+//            statsPageViewController.setViewControllers([singleStatViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+//        } else {
+//            let direction: UIPageViewControllerNavigationDirection = newIndex < healthStatsPageViewController.currentPageIndex ? .Reverse : .Forward
+//            healthStatsPageViewController.setViewControllers([healthStatViewController], direction:direction, animated: true)
+//        }
+//    }
     
 
     /*

@@ -20,6 +20,7 @@
 		0594EE451AFF7533004621BA /* AppointmentDetailsConformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594EE421AFF7533004621BA /* AppointmentDetailsConformViewController.swift */; };
 		0594EE461AFF7533004621BA /* AppointmentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594EE431AFF7533004621BA /* AppointmentTypeViewController.swift */; };
 		0594EE471AFF7533004621BA /* PhysciansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594EE441AFF7533004621BA /* PhysciansViewController.swift */; };
+		059D61661B006EC500D8B953 /* Lato Font in Resources */ = {isa = PBXBuildFile; fileRef = 059D61651B006EC500D8B953 /* Lato Font */; };
 		C539E6471A315E87003B7CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539E6461A315E87003B7CC7 /* AppDelegate.swift */; };
 		C539E64A1A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C539E6481A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld */; };
 		C539E64C1A315E87003B7CC7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539E64B1A315E87003B7CC7 /* MainViewController.swift */; };
@@ -64,6 +65,7 @@
 		0594EE421AFF7533004621BA /* AppointmentDetailsConformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsConformViewController.swift; sourceTree = "<group>"; };
 		0594EE431AFF7533004621BA /* AppointmentTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTypeViewController.swift; sourceTree = "<group>"; };
 		0594EE441AFF7533004621BA /* PhysciansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysciansViewController.swift; sourceTree = "<group>"; };
+		059D61651B006EC500D8B953 /* Lato Font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Lato Font"; sourceTree = "<group>"; };
 		C539E6411A315E87003B7CC7 /* SlideMenuControllerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideMenuControllerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539E6451A315E87003B7CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C539E6461A315E87003B7CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */ = {
 			isa = PBXGroup;
 			children = (
+				059D61651B006EC500D8B953 /* Lato Font */,
 				0594EE411AFF74C3004621BA /* Images */,
 				C539E6461A315E87003B7CC7 /* AppDelegate.swift */,
 				C5C1CE631A70F7C400B6E411 /* ViewController */,
@@ -329,6 +332,7 @@
 				C539E6511A315E87003B7CC7 /* Images.xcassets in Resources */,
 				0594EE3F1AFF74BE004621BA /* second.jpeg in Resources */,
 				0594EE401AFF74BE004621BA /* third.jpeg in Resources */,
+				059D61661B006EC500D8B953 /* Lato Font in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

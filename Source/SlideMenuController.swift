@@ -345,7 +345,6 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         self.setUpViewController(self.homeContainerView, targetViewController: self.homeViewController)
         if (close) {
             self.closeLeft()
-            self.closeRight()
         }
     }
     
@@ -576,15 +575,8 @@ extension UIViewController {
         self.slideMenuController()?.openLeft()
     }
     
-    func openRight() {
-        self.slideMenuController()?.openRight()    }
-    
     func closeLeft() {
         self.slideMenuController()?.closeLeft()
-    }
-    
-    func closeRight() {
-        self.slideMenuController()?.closeRight()
     }
     
     // Please specify if you want menu gesuture give priority to than targetScrollView
