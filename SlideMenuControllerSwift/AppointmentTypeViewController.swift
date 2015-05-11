@@ -100,7 +100,7 @@ class AppointmentTypeViewController: UIViewController, UITableViewDataSource, UI
         let headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 50))
         headerView.backgroundColor = UIColor.whiteColor()
         let headingLabel = UILabel(frame: CGRectMake(20, 20, self.view.frame.width, 30))
-        headingLabel.textColor = UIColor.blueColor()
+        headingLabel.textColor = UIColor(red: 83.0/255.0, green: 182.0/255.0, blue: 230.0/255.0, alpha: 1)
         headingLabel.text = section == 0 ? "Appointment type" : "Preference Date/Time"
         headerView.addSubview(headingLabel)
         return headerView

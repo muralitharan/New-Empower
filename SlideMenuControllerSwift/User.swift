@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class User {
     
@@ -26,10 +27,15 @@ class User {
 
 
 class Physician {
+    
     var name:String = ""
     var specialisedIN:String = ""
     var profilePic:UIImage?
     var address1:String = ""
     var address2:String = ""
     var address3:String = ""
+    
+    var location:CLLocationCoordinate2D!
+    var annotationTitle:String!
+    var annotationSubTitle:String!
 }

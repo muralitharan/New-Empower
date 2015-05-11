@@ -20,6 +20,8 @@
 		0594EE451AFF7533004621BA /* AppointmentDetailsConformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594EE421AFF7533004621BA /* AppointmentDetailsConformViewController.swift */; };
 		0594EE461AFF7533004621BA /* AppointmentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594EE431AFF7533004621BA /* AppointmentTypeViewController.swift */; };
 		0594EE471AFF7533004621BA /* PhysciansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594EE441AFF7533004621BA /* PhysciansViewController.swift */; };
+		0DB13CA11B0069AD0094F088 /* allan_kisner.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0DB13CA01B0069AD0094F088 /* allan_kisner.jpeg */; };
+		0DB13CA31B006B530094F088 /* fione_watson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DB13CA21B006B530094F088 /* fione_watson.jpg */; };
 		C539E6471A315E87003B7CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539E6461A315E87003B7CC7 /* AppDelegate.swift */; };
 		C539E64A1A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C539E6481A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld */; };
 		C539E64C1A315E87003B7CC7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539E64B1A315E87003B7CC7 /* MainViewController.swift */; };
@@ -64,6 +66,8 @@
 		0594EE421AFF7533004621BA /* AppointmentDetailsConformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsConformViewController.swift; sourceTree = "<group>"; };
 		0594EE431AFF7533004621BA /* AppointmentTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTypeViewController.swift; sourceTree = "<group>"; };
 		0594EE441AFF7533004621BA /* PhysciansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysciansViewController.swift; sourceTree = "<group>"; };
+		0DB13CA01B0069AD0094F088 /* allan_kisner.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = allan_kisner.jpeg; sourceTree = "<group>"; };
+		0DB13CA21B006B530094F088 /* fione_watson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fione_watson.jpg; sourceTree = "<group>"; };
 		C539E6411A315E87003B7CC7 /* SlideMenuControllerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideMenuControllerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539E6451A315E87003B7CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C539E6461A315E87003B7CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		0594EE411AFF74C3004621BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0DB13CA21B006B530094F088 /* fione_watson.jpg */,
+				0DB13CA01B0069AD0094F088 /* allan_kisner.jpeg */,
 				0594EE3B1AFF74BE004621BA /* Doc_Image.jpg */,
 				0594EE3C1AFF74BE004621BA /* second.jpeg */,
 				0594EE3D1AFF74BE004621BA /* third.jpeg */,
@@ -324,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0594EE3E1AFF74BE004621BA /* Doc_Image.jpg in Resources */,
+				0DB13CA11B0069AD0094F088 /* allan_kisner.jpeg in Resources */,
 				C539E64F1A315E87003B7CC7 /* Main.storyboard in Resources */,
+				0DB13CA31B006B530094F088 /* fione_watson.jpg in Resources */,
 				C539E6541A315E87003B7CC7 /* LaunchScreen.xib in Resources */,
 				C539E6511A315E87003B7CC7 /* Images.xcassets in Resources */,
 				0594EE3F1AFF74BE004621BA /* second.jpeg in Resources */,

@@ -22,7 +22,7 @@ class AppointmentPhysicianLocationViewController: UIViewController,AppointmentPh
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user.selectedPhysician = user.physicians[0]
+       // user.selectedPhysician = user.physicians[0]
         navigationItem.title = "Schedule Appointment"
         setUpMapView()
     }
@@ -77,17 +77,17 @@ class AppointmentPhysicianLocationViewController: UIViewController,AppointmentPh
     }
 
     func setUpMapView() {
-        let location = CLLocationCoordinate2D(
-            latitude: 51.50007773,
-            longitude: -0.1246402
-        )
+//        let location = CLLocationCoordinate2D(
+//            latitude: 51.50007773,
+//            longitude: -0.1246402
+//        )
         let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegion(center: location, span: span)
+        let region = MKCoordinateRegion(center: user.selectedPhysician!.location, span: span)
         mapView.setRegion(region, animated: true)
         let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "Big Ben"
-        annotation.subtitle = "London"
+        annotation.coordinate = user.selectedPhysician!.location
+        annotation.title = user.selectedPhysician!.annotationTitle
+        annotation.subtitle = user.selectedPhysician!.annotationSubTitle
         mapView.addAnnotation(annotation)
         mapView.layer.cornerRadius = 3.0
     }
