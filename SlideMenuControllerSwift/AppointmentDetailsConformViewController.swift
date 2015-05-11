@@ -33,6 +33,10 @@ class AppointmentDetailsConformViewController : UIViewController {
         return titles.count
     }
     
+    @IBAction func buttonSubmit_Tapped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AppointmentTableViewCell") as! AppointmentTableViewCell
         cell.fillData(title: titles[indexPath.row], value: values[indexPath.row])

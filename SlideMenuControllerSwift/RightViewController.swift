@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class RightViewController : UIViewController {
     
@@ -36,30 +37,82 @@ class RightViewController : UIViewController {
         user.modeOfcontacts = ["Patient Portal", "Call", "Text", "Email"]
         
         let physician1 = Physician()
-        physician1.name = "Ellison Joanne"
+        physician1.name = "Kevin Brune"
         physician1.specialisedIN = "Dentist"
         physician1.profilePic = UIImage(named: "Doc_Image.jpg")
-        physician1.address1 = "185 Canel Street"
+        physician1.address1 = "489, 5th Ave"
         physician1.address2 = "4th Floor"
-        physician1.address3 = "New York, NY 10013"
+        physician1.address3 = "New York, NY 10017"
+        physician1.location = CLLocationCoordinate2D(
+            latitude: 40.7350235,
+            longitude: -73.9876265
+        )
+        physician1.annotationTitle = "One Medical Group"
+        physician1.annotationSubTitle = "Health care for the whole person"
+
+        
         
         let physician2 = Physician()
         physician2.name = "Davies Jan"
         physician2.specialisedIN = "Primary Care"
         physician2.profilePic = UIImage(named: "third.jpeg")
-        physician2.address1 = "30 Broad Street"
+        physician2.address1 = "48 Madison AVE #1220"
         physician2.address2 = "45th Floor"
-        physician2.address3 = "New York, NY 10004"
+        physician2.address3 = "New York, NY 10022"
+        physician2.location = CLLocationCoordinate2D(
+            latitude: 40.7600163,
+            longitude: -73.972506
+        )
+        physician2.annotationTitle = "St Lukes Roosevelt Hospital Center"
+        physician2.annotationSubTitle = "School of medicine"
+        
         
         let physician3 = Physician()
         physician3.name = "Clark Gabrielle"
         physician3.specialisedIN = "Dermatology"
         physician3.profilePic = UIImage(named: "second.jpeg")
-        physician3.address1 = "40 Wall Street"
+        physician3.address1 = "200 W 20th ST #105"
         physician3.address2 = "5th Floor"
-        physician3.address3 = "New York, NY 10005"
+        physician3.address3 = "New York, NY 10011"
+        physician3.location = CLLocationCoordinate2D(
+            latitude: 40.741664,
+            longitude: -73.986432
+        )
         
-        user.physicians = [physician1,physician2,physician3]
+        physician3.annotationTitle = "Dr. Ovatish"
+        physician3.annotationSubTitle = "School of medicine"
+        
+        let physician4 = Physician()
+        physician4.name = "Allan Kinser"
+        physician4.specialisedIN = "Dermatology"
+        physician4.profilePic = UIImage(named: "allan_kisner.jpeg")
+        physician4.address1 = "301 Park Ave #100"
+        physician4.address2 = "5th Floor"
+        physician4.address3 = "New York, NY 10022"
+        physician4.location = CLLocationCoordinate2D(
+            latitude: 40.7565711,
+            longitude: -73.9736422
+        )
+        
+        physician4.annotationTitle = "Kisner Plastic Surgery Center"
+        physician4.annotationSubTitle = "School of medicine"
+        
+        let physician5 = Physician()
+        physician5.name = "Fione J Watson"
+        physician5.specialisedIN = "Dental"
+        physician5.profilePic = UIImage(named: "fione_watson.jpg")
+        physician5.address1 = "224 W 35th Street"
+        physician5.address2 = "5th Floor"
+        physician5.address3 = "New York, NY 10001"
+        physician5.location = CLLocationCoordinate2D(
+            latitude: 40.7529769,
+            longitude: -73.9958918
+        )
+        
+        physician5.annotationTitle = "Herald Square Dental"
+        physician5.annotationSubTitle = ""
+        
+        user.physicians = [physician1,physician2,physician3,physician4,physician5]
         user.appointmentTypes = ["Follow-up Visit", "Annual Physical", "Lab Work", "Cardiology Check-up"]
         
         let appointment1 = Appointment()
@@ -177,8 +230,8 @@ class RightViewController : UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let appointmentPhysicianLocationViewController = segue.destinationViewController as! AppointmentPhysicianLocationViewController
-        appointmentPhysicianLocationViewController.user = user
+        let physiciansViewController = segue.destinationViewController as! PhysciansViewController
+        physiciansViewController.user = user
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -308,6 +361,14 @@ class LabelAddress: UILabel {
         super.init(coder: aDecoder)
         self.font = UIFont(name: "Lato", size: 12.0)
         self.textColor = UIColor(red: 143/255.0, green: 144/255.0, blue: 145/255.0, alpha: 1)
+    }
+}
+
+class LabelHeading: UILabel {
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.font = UIFont(name: "Lato", size: 22.0)
+        self.textColor = UIColor(red: 83.0/255.0, green: 182.0/255.0, blue: 230.0/255.0, alpha: 1)
     }
 }
 

@@ -20,7 +20,7 @@ class PhysciansViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Select a Physician"
+        navigationItem.title = "Schedule Appointment"
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,8 +41,16 @@ class PhysciansViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.delegate.updatePhysician(user.physicians[indexPath.row])
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let appointmentPhysicianLocationViewController =   storyboard.instantiateViewControllerWithIdentifier("AppointmentPhysicianLocationViewController") as! AppointmentPhysicianLocationViewController
+        
+        self.user.selectedPhysician = user.physicians[indexPath.row]
+        appointmentPhysicianLocationViewController.user =  self.user
+        self.navigationController?.pushViewController(appointmentPhysicianLocationViewController, animated: true)
+        
+        // self.delegate.updatePhysician(user.physicians[indexPath.row])
+        //self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -55,6 +63,10 @@ class PhysciansViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func dissmissButton_Tapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func backButton_Tapped(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
 }
