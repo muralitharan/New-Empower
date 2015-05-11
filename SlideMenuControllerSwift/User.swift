@@ -23,6 +23,8 @@ class User {
     var preferredDateAndTime:[String:Int]?
     var modeOfcontacts:[String] = []
     var selectedModeOfContact:String = ""
+    
+    var appointments:[Appointment] = []
 }
 
 

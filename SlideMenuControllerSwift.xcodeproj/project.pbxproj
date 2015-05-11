@@ -144,6 +144,7 @@
 		C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */ = {
 			isa = PBXGroup;
 			children = (
+				059D61651B006EC500D8B953 /* Lato Font */,
 				0594EE411AFF74C3004621BA /* Images */,
 				C539E6461A315E87003B7CC7 /* AppDelegate.swift */,
 				C5C1CE631A70F7C400B6E411 /* ViewController */,
@@ -337,6 +338,7 @@
 				C539E6511A315E87003B7CC7 /* Images.xcassets in Resources */,
 				0594EE3F1AFF74BE004621BA /* second.jpeg in Resources */,
 				0594EE401AFF74BE004621BA /* third.jpeg in Resources */,
+				059D61661B006EC500D8B953 /* Lato Font in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
