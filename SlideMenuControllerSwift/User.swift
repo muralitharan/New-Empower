@@ -27,7 +27,6 @@ class User {
     var appointments:[Appointment] = []
 }
 
-
 class Physician {
     
     var name:String = ""
@@ -40,4 +39,17 @@ class Physician {
     var location:CLLocationCoordinate2D!
     var annotationTitle:String!
     var annotationSubTitle:String!
+}
+
+
+class Appointment {
+    var physician:String = ""
+    var time:String = ""
+    var date:String = ""
+    var month:String = ""
+    var priorityColor:UIColor = UIColor()
+    var status:String = ""
+    var isFamily:Bool = true
+    var personName:String = ""
+    
 }

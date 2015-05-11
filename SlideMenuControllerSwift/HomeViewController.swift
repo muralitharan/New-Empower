@@ -34,10 +34,10 @@ class HomeViewController: UIViewController, UIPageViewControllerDelegate {
     }
     
 //    private func setViewControllerAtIndex(newIndex: Int) {
-//        let singleStatViewController = StatsPageViewController.viewControllerAtIndex(newIndex)!
+//        let singleStatViewController = statsPageViewController.viewControllerAtIndex(newIndex)
 //        
 //        if statsPageViewController.viewControllers.isEmpty {
-//            statsPageViewController.setViewControllers([singleStatViewController])
+//            statsPageViewController.setViewControllers([singleStatViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
 //        } else {
 //            let direction: UIPageViewControllerNavigationDirection = newIndex < healthStatsPageViewController.currentPageIndex ? .Reverse : .Forward
 //            healthStatsPageViewController.setViewControllers([healthStatViewController], direction:direction, animated: true)
