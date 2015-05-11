@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0557A2791AFC71B500A5E7BC /* SingleStatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0557A2781AFC71B500A5E7BC /* SingleStatViewController.swift */; };
+		0579845A1B0031E0001A8AC5 /* DemographicAndInsuranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057984591B0031E0001A8AC5 /* DemographicAndInsuranceViewController.swift */; };
 		0592CE2F1AFB5D7C00274322 /* CellExpansionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592CE2E1AFB5D7C00274322 /* CellExpansionDelegate.swift */; };
 		0592CE311AFB89D000274322 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592CE301AFB89D000274322 /* HomeViewController.swift */; };
 		0592CE331AFB8B9D00274322 /* StatsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592CE321AFB8B9D00274322 /* StatsPageViewController.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		0557A2781AFC71B500A5E7BC /* SingleStatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleStatViewController.swift; sourceTree = "<group>"; };
+		057984591B0031E0001A8AC5 /* DemographicAndInsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemographicAndInsuranceViewController.swift; sourceTree = "<group>"; };
 		0592CE2E1AFB5D7C00274322 /* CellExpansionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellExpansionDelegate.swift; sourceTree = "<group>"; };
 		0592CE301AFB89D000274322 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0592CE321AFB8B9D00274322 /* StatsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsPageViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		C5C1CE631A70F7C400B6E411 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				057984591B0031E0001A8AC5 /* DemographicAndInsuranceViewController.swift */,
 				0594EE421AFF7533004621BA /* AppointmentDetailsConformViewController.swift */,
 				0594EE431AFF7533004621BA /* AppointmentTypeViewController.swift */,
 				0594EE441AFF7533004621BA /* PhysciansViewController.swift */,
@@ -362,6 +365,7 @@
 				0557A2791AFC71B500A5E7BC /* SingleStatViewController.swift in Sources */,
 				C5BA8AA61A43E2EF00863FB9 /* SlideMenuController.swift in Sources */,
 				0592CE331AFB8B9D00274322 /* StatsPageViewController.swift in Sources */,
+				0579845A1B0031E0001A8AC5 /* DemographicAndInsuranceViewController.swift in Sources */,
 				C539E66E1A316F5F003B7CC7 /* RightViewController.swift in Sources */,
 				C5C1CE5F1A70F2FD00B6E411 /* StringExtension.swift in Sources */,
 				C5BD39DA1A6CD12300D0AF95 /* SwiftViewController.swift in Sources */,

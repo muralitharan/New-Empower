@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, UIPageViewControllerDelegate {
         super.viewDidLoad()
         
         statsPageViewController.configure(["My Appointments", "My Patients", "My Doctors"], delegate: self)
-        pageControl.numberOfPages = 4
+        pageControl.numberOfPages = 3
         // Do any additional setup after loading the view.
     }
     
@@ -33,16 +33,16 @@ class HomeViewController: UIViewController, UIPageViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-//    private func setViewControllerAtIndex(newIndex: Int) {
-//        let singleStatViewController = StatsPageViewController.viewControllerAtIndex(newIndex)
-//        
-//        if statsPageViewController.viewControllers.isEmpty {
-//            statsPageViewController.setViewControllers([singleStatViewController])
-//        } else {
-//            let direction: UIPageViewControllerNavigationDirection = newIndex < healthStatsPageViewController.currentPageIndex ? .Reverse : .Forward
-//            healthStatsPageViewController.setViewControllers([healthStatViewController], direction:direction, animated: true)
-//        }
-//    }
+    private func setViewControllerAtIndex(newIndex: Int) {
+        let singleStatViewController = StatsPageViewController.viewControllerAtIndex(newIndex)!
+        
+        if statsPageViewController.viewControllers.isEmpty {
+            statsPageViewController.setViewControllers([singleStatViewController])
+        } else {
+            let direction: UIPageViewControllerNavigationDirection = newIndex < healthStatsPageViewController.currentPageIndex ? .Reverse : .Forward
+            healthStatsPageViewController.setViewControllers([healthStatViewController], direction:direction, animated: true)
+        }
+    }
     
 
     /*
